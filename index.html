@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- 【替换】浏览器标签页标题：改成你的名字 -->
+<title>Your Name</title>
+<style>
+  :root {
+    --text: #24292f;
+    --muted: #57606a;
+    --link: #0969da;
+    --border: #d8dee4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+      "PingFang SC", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 56px 28px 48px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; }
+  .subtitle { color: var(--muted); font-size: 1.05rem; margin-top: 2px; }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 48px 0 18px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--text);
+  }
+
+  /* Biography：头像 + 简介 */
+  .bio { display: flex; gap: 28px; align-items: flex-start; margin-top: 12px; }
+  .avatar {
+    flex: 0 0 150px;
+    height: 150px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4a6fa5 0%, #2d4a7a 100%);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+  .bio-text p { margin-bottom: 16px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; }
+  .contact .btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 5px 14px; font-size: 0.875rem; color: var(--text);
+  }
+  .contact .btn:hover { border-color: var(--link); color: var(--link); text-decoration: none; }
+  .contact .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .news { list-style: none; }
+  .news li { margin: 6px 0; }
+  .news .date { font-weight: 600; margin-right: 4px; }
+
+  /* Education / Experience 条目 */
+  .item { margin-bottom: 26px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .row .org { font-weight: 700; font-size: 1.05rem; }
+  .row .time { color: var(--muted); font-weight: 600; font-size: 0.95rem; white-space: nowrap; }
+  .role { font-style: italic; color: var(--muted); }
+  .bullets { margin: 6px 0 0 20px; }
+  .bullets li { margin: 3px 0; }
+
+  /* Publications */
+  .pub { padding: 14px 0; border-top: 1px solid var(--border); }
+  .pubs .pub:first-child { border-top: none; padding-top: 0; }
+  .pub-title { font-weight: 700; }
+  .pub-venue { font-style: italic; color: var(--muted); }
+  .pub-links { margin-top: 4px; font-size: 0.9rem; }
+
+  footer { margin-top: 64px; text-align: center; color: var(--muted); font-size: 0.875rem; }
+
+  @media (max-width: 640px) {
+    .bio { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 【替换】你的名字和一句话职位介绍 -->
+  <header>
+    <h1>Your Name</h1>
+    <p class="subtitle">Software Engineer · Storage &amp; Database Systems</p>
+  </header>
+
+  <section class="bio">
+    <!-- 占位头像（名字首字母）。想用真实照片：把 avatar.jpg 放到本文件同目录，
+         然后把下面的 div 替换为：
+         <img class="avatar" src="avatar.jpg" alt="Your Name" /> -->
+    <div class="avatar">YN</div>
+    <div class="bio-text">
+      <!-- 【替换】个人简介：写清你在哪、做什么、方向和兴趣 -->
+      <p>
+        I am a software engineer at <a href="#">[Company]</a>, working on
+        high-performance storage systems. My work focuses on LSM-tree based
+        key-value stores and their integration with production database systems.
+        I received my M.S. degree from <a href="#">[Your University]</a>.
+        My interests include C++, Linux internals, and distributed KV systems.
+      </p>
+      <!-- 【替换】联系方式：邮箱地址和各主页链接 -->
+      <div class="contact">
+        <a class="btn" href="mailto:your.email@example.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Mail
+        </a>
+        <a class="btn" href="https://github.com/yourname">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/yourname">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="https://scholar.google.com/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-4.5"/></svg>
+          Google Scholar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <h2>News</h2>
+  <ul class="news">
+    <!-- 【替换】按时间倒序，最新的放最上面 -->
+    <li><span class="date">[2026/09]</span> Launched my personal homepage.</li>
+    <li><span class="date">[2025/06]</span> Joined <a href="#">[Company]</a> as a software engineer.</li>
+  </ul>
+
+  <h2>Education</h2>
+  <!-- 【替换】教育经历，可增删条目 -->
+  <div class="item">
+    <div class="row">
+      <a class="org" href="#">[Your University]</a>
+      <span class="time">Sep 2020 – Jun 2023</span>
+    </div>
+    <div class="role">M.S. in Computer Science</div>
+  </div>
+  <div class="item">
+    <div class="row">
+      <a class="org" href="#">[Your University]</a>
+      <span class="time">Sep 2016 – Jun 2020</span>
+    </div>
+    <div class="role">B.S. in Computer Science</div>
+  </div>
+
+  <h2>Industry Experience</h2>
+  <!-- 【替换】工作经历：公司 + 时间 + 职位 + 做了什么（bullet 可省略） -->
+  <div class="item">
+    <div class="row">
+      <a class="org" href="#">[Company]</a>
+      <span class="time">Jun 2023 – Present</span>
+    </div>
+    <div class="role">Software Engineer</div>
+    <ul class="bullets">
+      <li>Working on <a href="#">[Project]</a>, a distributed key-value storage system based on LSM-trees.</li>
+      <li>Designed and implemented [Feature X] in C++, improving write throughput by XX%.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row">
+      <a class="org" href="#">[Another Company]</a>
+      <span class="time">Jun 2022 – Sep 2022</span>
+    </div>
+    <div class="role">Software Engineer Intern</div>
+    <ul class="bullets">
+      <li>Worked on cloud database [System], focusing on [Module].</li>
+    </ul>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="pubs">
+    <!-- 【替换】论文条目：标题 + 作者（自己的名字加粗）+ 会议/期刊 + 链接 -->
+    <div class="pub">
+      <div class="pub-title">[Paper Title]</div>
+      <div class="pub-authors"><strong>Your Name</strong>, Author Two, Author Three.</div>
+      <div class="pub-venue">In Proceedings of [Conference/Journal] ([Venue] 2025).</div>
+      <div class="pub-links">
+        [<a href="#">paper</a>]&nbsp; [<a href="#">code</a>]
+      </div>
+    </div>
+  </div>
+
+  <!-- 可选板块：如果需要演讲/学术服务，取消下面注释并填内容；不需要就整段删除
+  <h2>Invited Talks</h2>
+  <ul class="news">
+    <li><span class="date">[2025]</span> [Talk Title], <em>[Event]</em>, [City], [Year]. [<a href="#">video</a>]</li>
+  </ul>
+
+  <h2>Service</h2>
+  <ul class="news">
+    <li><span class="date">[Reviewer]</span> [Conference/Journal], [Year].</li>
+  </ul>
+  -->
+
+  <!-- 【替换】页脚名字 -->
+  <footer>© Your Name 2026</footer>
+</div>
+</body>
+</html>
